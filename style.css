@@ -22,6 +22,7 @@ body {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
   color: #fff;
 }
@@ -136,10 +137,21 @@ header {
   position: absolute;
 }
 
+.nav__item {
+  padding: 0.5em 0;
+}
+
 .nav--visible {
   visibility: visible;
   height: auto;
   position: relative;
+}
+
+.nav__link--button {
+  color: #136c72;
+  background-color: #fff;
+  padding: 0.4em 0.8em;
+  border-radius: 25px;
 }
 
 .logo {
@@ -179,12 +191,27 @@ header {
   .nav {
     visibility: visible;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: auto;
+    width: 70%;
+    position: unset;
+  }
+
+  .nav__list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  .nav__list > li + li {
+    margin-left: 1.5em;
   }
 
   .row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .hero__text {
